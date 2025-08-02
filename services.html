@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - Masolo Cargo</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Additional styles specific to services page */
+        .services-hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #2980b9 100%);
+            color: var(--white);
+            padding: 200px 0 30px;
+            position: relative;
+
+            text-align: center;
+        }
+        
+        .services-section {
+            padding: 80px 0;
+            background-image: url(../photologistics/image2.jpeg) 
+        }
+        
+        .service-item {
+            display: flex;
+            align-items: start;
+            margin-bottom: 4rem;
+            padding: 2rem;
+            background: var(--white);
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .service-icon {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-right: 2rem;
+            min-width: 80px;
+        }
+        
+        .service-content h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .service-features {
+            margin-top: 1rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+        
+        .feature-item {
+            display: flex;
+            align-items: center;
+        }
+        
+        .feature-item i {
+            color: var(--secondary-color);
+            margin-right: 0.5rem;
+        }
+
+        @media screen and (max-width: 768px) {
+            .service-item {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .service-icon {
+                margin: 0 0 1rem 0;
+            }
+            
+            .service-features {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">   
+            <div class="nav-logo"><img src="photologistics/full masolo.png"></div>
+                <span class="flag-icons"><img src="photologistics/photo flags31.png" alt=""></span>
+                <h2>Masolo Logistics Full business</h2>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Acceuil</a>
+                </li>
+                <li class="nav-item">
+                    <a href="services.html" class="nav-link active">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="nav-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Services Hero -->
+    <section class="services-hero">
+        <div class="container">
+            <h1>Nos Services</h1>
+            <p>Des solutions logistiques complètes adaptées à vos besoins</p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section">
+        <div class="container">
+            <!-- Express Delivery -->
+            <div class="service-item">
+                <div class="service-icon">
+                    <i class="fas fa-shipping-fast"></i>
+                </div>
+                <div class="service-content">
+                    <h3>Livraison express</h3>
+                    <p>Services de livraison express rapides et fiables pour vos envois urgents. Nous garantissons que votre marchandise arrive à destination rapidement et en toute sécurité.</p>
+                    <div class="service-features">
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Livraison le jour même</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Suivi en temps réel</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Traitement prioritaire</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Warehousing -->
+            <div class="service-item">
+                <div class="service-icon">
+                    <i class="fas fa-warehouse"></i>
+                </div>
+                <div class="service-content">
+                    <h3>Solutions d'entreposage</h3>
+                    <p>Des installations d’entreposage à la pointe de la technologie avec des systèmes de gestion des stocks avancés pour garder vos marchandises en sécurité et organisées.</p>
+                    <div class="service-features">
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Securité 24/7</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Contrôle climatique</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Suivi des stocks</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ocean Freight -->
+            <div class="service-item">
+                <div class="service-icon">
+                    <i class="fas fa-ship"></i>
+                </div>
+                <div class="service-content">
+                    <h3>Frêt maritime</h3>
+                    <p>Services de fret maritime rentables pour le transport international, gérant les expéditions FCL et LCL avec expertise.</p>
+                    <div class="service-features">
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Couverture globale</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Custom clearance</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Assurance marchandises</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Air Freight -->
+            <div class="service-item">
+                <div class="service-icon">
+                    <i class="fas fa-plane"></i>
+                </div>
+                <div class="service-content">
+                    <h3>Frêt aérien</h3>
+                    <p>Services de fret aérien haut de gamme pour les expéditions urgentes et de grande valeur, garantissant une livraison rapide et sécurisée dans le monde entier.</p>
+                    <div class="service-features">
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Fret aérien express</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Service porte-à-porte</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Contrôle de la température</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Masolo Cargo</h3>
+                    <p>Votre partenaire de confiance pour des solutions logistiques professionnelles dans le monde entier.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/share/19X7NJYao7/?mibextid=wwXIfr"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/masolo_logistics2025?igsh=MWhhbWFnOWw1cTE4bA=="><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Acceuil</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <h5>Airtel Money</h5>
+                        <p>+243 993 278 500</p>
+                        <h5>M-PESA</h5>
+                        <p>+243 814 226 588</p>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="contact-info">
+                        
+                        <p><i class="fas fa-envelope"></i> masolologistics@gmail.com</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Nº 44/34300 Küçük Langa. Cad, Fatih,ISTANBUL/TURKYE</p>
+                        <p><i class="fas fa-phone"></i>+90 534 084 35 23</p>
+                        <p><i class="fab fa-whatsapp"></i>+90 535 067 57 94 </p>
+                        <p><i class="fas fa-map-marker-alt"></i>Nº 1.Bombo street, Birmanie Ave,Kasa-Vubu, KINSHASA/DRC</p>
+                        <p><i class="fas fa-phone"></i>+243 993 278 500</p>
+                        <p><i class="fas fa-map-marker-alt"></i>Nº 2063, Lumumba Ave. Ref: station Nazem, LUBUMBASHI/DRC</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Masolo Cargo. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>

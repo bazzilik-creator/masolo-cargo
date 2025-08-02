@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Masolo Cargo</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Additional styles specific to contact page */
+        .contact-hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #2980b9 100%);
+            color: var(--white);
+            padding: 200px 0 30px;
+            text-align: center;
+        }
+        
+        .contact-section {
+            padding: 80px 0;
+            background-color: var(--light-gray);
+        }
+        
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+        
+        .contact-form {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+        
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        
+        .contact-info-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 2rem;
+            padding: 1rem;
+            background: var(--light-gray);
+            border-radius: 8px;
+        }
+        
+        .contact-item i {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-right: 1rem;
+            min-width: 50px;
+        }
+        
+        .contact-item-content h4 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        .office-hours {
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-top: 2rem;
+        }
+        
+        .office-hours h4 {
+            margin-bottom: 1rem;
+            color: var(--secondary-color);
+        }
+        
+        .hours-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+        }
+
+        @media screen and (max-width: 768px) {
+            .contact-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo"><img src="photologistics/full masolo.png"></div>    
+                <span class="flag-icons"><img src="photologistics/photo flags31.png" alt=""></span>
+                <h2>Masolo Logistics Full business</h2>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Acceuil</a>
+                </li>
+                <li class="nav-item">
+                    <a href="services.html" class="nav-link">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link active">Contact</a>
+                </li>
+            </ul>
+            <div class="nav-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Hero -->
+    <section class="contact-hero">
+        <div class="container">
+            <h1>Contactez Nous</h1>
+            <p>Entrez en contact avec nous pour tous vos besoins !</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-container">
+                <!-- Contact Form -->
+                <div class="contact-form">
+                    <h2>Envoyer un message</h2>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Nom complet *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Adresse e-mail *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Numero de téléphone</label>
+                            <div style="display: flex; gap: 0.5rem;">
+                                <select id="countryCode" name="countryCode" style="width: 150px; padding: 12px; border: 2px solid #ddd; border-radius: 5px; font-size: 1rem; background: white; cursor: pointer;">
+                                    <option value="+1">+1 (USA)</option>
+                                    <option value="+90" selected>+90 (Turkey)</option>
+                                    <option value="+243">+243 (DRC)</option>
+                                    <option value="+44">+44 (UK)</option>
+                                    <option value="+33">+33 (France)</option>
+                                    <option value="+49">+49 (Germany)</option>
+                                    <option value="+81">+81 (Japan)</option>
+                                    <option value="+61">+61 (Australia)</option>
+                                    <option value="+86">+86 (China)</option>
+                                    <option value="+91">+91 (India)</option>
+                                    <option value="+91">+244 (Angola)</option>
+                                    <option value="+91">+86 (Chine)</option>
+                                    <option value="+91">+32 (Belgique)</option>
+                                    <option value="+91">+971 (Dubai)</option>
+                                    <option value="+91">+41 (Suisse)</option>
+                                    <option value="+91">+351 (Portugal)</option>
+                                    <option value="+91">+34 (Espagne)</option>
+                                    <option value="+91">+31 (Netherlands)</option>
+                                    <option value="+91">+1 (Canada)</option>
+                                </select>
+                                <input type="tel" id="phone" name="phone" style="flex: 1;">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="service">Service requis</label>
+                            <select id="service" name="service">
+                                <option value="">Sélectionnez une prestation</option>
+                                <option value="express-delivery">Livraison expresse</option>
+                                <option value="warehousing">Entreposage</option>
+                                <option value="ocean-freight">Frêt maritime</option>
+                                <option value="air-freight">Frêt aérien</option>
+                                <option value="other">Autres</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" placeholder="Tell us about your logistics needs..." required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Envoyer un message</button>
+                    </form>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="contact-info-card">
+                    <h2>Entrer en contact</h2>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="contact-item-content">
+                            <h4>Addresse</h4>
+                            <p>Nº 44/34300 Küçük Langa. Cad, Fatih,ISTANBUL/TURKYE</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div class="contact-item-content">
+                            <h4>Phone</h4>
+                            <p>+90 534 084 35 23<br>+243 993 278 500</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div class="contact-item-content">
+                            <h4>Email</h4>
+                            <p>christsalaip0214@gmail.com<br>masolologistics@gmail.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-globe"></i>
+                        <div class="contact-item-content">
+                            <h4>Website</h4>
+                            <p>www.masolologistics.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="office-hours">
+                        <h4>Heures de bureau</h4>
+                        <div class="hours-item">
+                            <span>Lundi - Vendredi:</span>
+                            <span>8:00 AM - 6:00 PM</span>
+                        </div>
+                        <div class="hours-item">
+                            <span>Samedi:</span>
+                            <span>9:00 AM - 4:00 PM</span>
+                        </div>
+                        <div class="hours-item">
+                            <span>Dimanche:</span>
+                            <span>Emergency Only</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Masolo Cargo</h3>
+                    <p>Votre partenaire de confiance pour des solutions logistiques professionnelles dans le monde entier.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/share/19X7NJYao7/?mibextid=wwXIfr"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/masolo_logistics2025?igsh=MWhhbWFnOWw1cTE4bA=="><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Acceuil</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <h5>Airtel Money</h5>
+                        <p>+243 993 278 500</p>
+                        <h5>M-PESA</h5>
+                        <p>+243 814 226 588</p>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="contact-info">
+                        
+                        <p><i class="fas fa-envelope"></i> masolologistics@gmail.com</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Nº 44/34300 Küçük Langa. Cad, Fatih,ISTANBUL/TURKYE</p>
+                        <p><i class="fas fa-phone"></i>+90 534 084 35 23</p>
+                        <p><i class="fab fa-whatsapp"></i>+90 535 067 57 94 </p>
+                        <p><i class="fas fa-map-marker-alt"></i>Nº 1.Bombo street, Birmanie Ave,Kasa-Vubu, KINSHASA/DRC</p>
+                        <p><i class="fas fa-phone"></i>+243 993 278 500</p>
+                        <p><i class="fas fa-map-marker-alt"></i>Nº 2063, Lumumba Ave. Ref: station Nazem, LUBUMBASHI/DRC</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Masolo Cargo. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
